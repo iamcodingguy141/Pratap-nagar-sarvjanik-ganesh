@@ -1,0 +1,734 @@
+
+/* General styling starts here */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;;
+}
+p{
+    margin: 0;
+}
+body{
+    text-align:center;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    color: #ffa500;
+    padding: 20px 0;
+    
+}
+
+.no-class{
+    /* Empty Class */
+}
+
+#loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it appears above other content */
+}
+
+.marathi-nav-text{
+    font-family: Mukta, cursive !important; 
+    /* font-size: 18px !important;  */
+}
+
+/* Loading animation */
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Initial state of the text */
+.fade-in-text {
+    opacity: 0;
+    transform: translateY(30px); /* Optional: Add a subtle slide-in effect */
+    transition: opacity 2s ease, transform 1s ease;
+}
+
+/* Animation when the element is in the viewport */
+.fade-in-text.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-in-text .fade-in h2{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* General styling ends here */
+
+
+
+
+
+/* Navbar Section Start*/
+.navbar-custom{
+    background-color: #800020;
+    /* border-bottom: 3px solid #fff; */
+}
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+}
+
+.navbar-light{
+    font-weight: bold;
+    color: #006a71;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.fa-solid{
+    color: #fff;
+}
+
+
+
+/* Navbar Section End*/
+
+
+
+/* Home Section Start*/
+
+.home-image {
+    max-width: 100%;
+    display: block;
+    margin: auto auto; /* Center horizontally */
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.home-text{
+    padding: 10px 0;
+    color: #4d4d4d;
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+.home-container{
+    background-image: url(../images/common/logo.avif);
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: 80% auto;
+    background-position: center;
+    background-position-y:center;
+}
+
+.shlok-font{
+    /* transform: translateX(300%); Initial position outside the viewport */
+    font-family: 'Amita', cursive;
+    font-size: 2rem;
+    color: #800020;
+    font-weight: bold;
+}
+
+
+.marathi-text{
+    font-family: Mukta, cursive;
+    font-size: 25px !important;
+}
+
+.home-text p{
+    padding: 20px 0px;
+}
+
+.text-inside{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Styles for small screens */
+@media screen and (max-width: 767px) {
+    .home-container{
+        background-position-y: calc(100vh - 40vh);
+    }
+
+    .marathi-text{
+        font-size: 18px !important;
+        font-weight: 200;
+    }
+    
+    .home-text p {
+        padding: 15px 0px;
+    }
+
+    .english-text{
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    
+
+    .shlok-font{
+        /* transform: translateX(300%); Initial position outside the viewport */
+        font-family: 'Amita', cursive;
+        font-size: 16px;
+        padding-bottom: 30px !important;
+        color: #800020;
+        font-weight: bolder;
+    }
+
+}
+
+.moving-text-banner {
+    width: 100%; /* Make the banner 100% wide */
+    height: 50px; /* Adjust the height as needed */
+    background-color: #ffffff;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 5px 0;
+}
+
+.banner-text {
+    display: inline-block;
+    animation: moveText 15s linear infinite;
+    /* transform: translateX(300%); Initial position outside the viewport */
+    font-family: 'Khand', cursive;
+    font-size: 2rem;
+    color: #800020;
+    font-weight: bold;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(150vb);
+    }
+    100% {
+        transform: translateX(-150vb);
+    }
+}
+
+/* Styles for small screens */
+@media screen and (max-width: 767px) {
+
+    .banner-text {
+        animation: moveTextSmall 15s linear infinite;
+    }
+    
+    @keyframes moveTextSmall {
+        0% {
+            transform: translateX(100vb);
+        }
+        100% {
+            transform: translateX(-100vb);
+        }
+    }
+
+
+}
+
+
+
+
+
+/* Home Section End*/
+
+
+/* Gallery Section Start*/
+
+
+.carousel {
+    width: 100%;
+    /* background-color: #006a71; */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+  
+.carousel-item {
+    max-width: 100%;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.gallery-image {
+    max-width: 800px;
+    max-height: 700px;
+    display: block;
+    margin: auto auto; /* Center horizontally */
+    width: auto;
+    height: auto;
+    background-color: #ffa500;
+    border-width: 2px;
+}
+
+
+.ganpati-carousel{
+    margin-top: 30px;
+}
+
+
+
+.gallery-image-card {
+    margin: 20px;
+    max-width: 180px;
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    background-color: white;
+    font-weight: bold;
+    border: 2px solid white;
+}
+#vighnaharta-carousel, #visarjan-carousel, #social-activities-carousel{
+    margin: 40px 0 10px 0;
+}
+.donation-box div{
+    width: 50%;
+    padding-left: 30px;
+}
+/* Styles for small screens */
+@media screen and (max-width: 809px) {
+
+    .gallery-image-card {
+        max-width: 50%;
+        margin-top: 10px;
+        font-size: 12px;
+        margin: 15px;
+    }
+    
+}
+
+    .carousel-button{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    /* Styling for the card container */
+    .card-container {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        padding: 0px;
+        /* justify-content: center; */
+    }
+
+    .card-container .gallery-image-card:first-child{
+        margin-left: 10px;
+
+    } 
+
+    .card-container .gallery-image-card:last-child{
+        margin-right: 10px;
+    } 
+
+    /* Styling for individual cards */
+    .card {
+        flex: 0 0 auto;
+        margin-right: 16px; /* Spacing between cards */
+        border-radius: 8px;
+        padding: 1px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Add some content and styles to the cards */
+    .card h2 {
+        margin-top: 0;
+    }
+
+    /* Hide horizontal scrollbar */
+    .card-container::-webkit-scrollbar {
+        display: none;
+    }
+
+
+/* Gallery Section End*/
+
+
+
+/* Donations Section Start*/
+
+
+.donation-image {
+    display: flex;
+    max-width: 400px;
+    max-height: 500px;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    background-color: #ffa500;
+    border-width: 2px;
+}
+
+.donation-text{
+    display:inline-block;
+    font-size: 16px;
+    margin: 20px 0px;
+    background-color: #ffa500;
+    padding: 20px 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+/* Donations Section End*/
+
+
+
+
+/* Footer Section Start*/
+
+.tag-line{
+    padding:30px 0 0px;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #006a71;
+    font-weight: bold;
+}
+
+.contact-icon-custom{
+    color: white;
+    font-size: 3rem;
+    margin: 0px 10px;
+    font-size: 40px;
+}
+
+.footer-custom{
+    background-color: #fff;;
+    padding: 10px;
+    margin: 0;
+    font-size: 12px;
+    color: #4d4d4d;
+}
+
+.marathi-address-text{
+    font-family: Mukta, cursive !important; 
+    font-size: 20px !important; 
+}
+
+/* Footer Section End*/
+ 
+/* Rishi Css Start */
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    color: #fff;
+    background: none;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    font-weight: bold;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    top: 40px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: #800020;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background: none;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+        background-color: #800020;
+        color: #fff;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+.dropdown button:focus{
+    outline: none;
+}
+  
+.galler-card{
+    display: flex;
+    justify-content: center;
+}
+.donation-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 40px 0;
+}
+.donation-box p{
+    padding: 10px 0;
+    color: #4d4d4d;
+    font-size: 18px;
+    font-weight: 800;
+
+}
+.footer-content{
+    color: white;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.footer-content p{
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    padding-bottom: 20px;
+}
+.social-icons a:first-child{
+    margin-left: 0;
+}
+
+
+.mapouter{
+    margin: 0 auto;
+}
+/* .sticky-padding{
+    padding-top: 56px;
+} */
+
+/* Remove border around the hamburger menu button */
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    border: none;
+    outline: none;
+}
+
+.navbar-brand{
+    padding: 0;
+}
+
+
+
+
+.sticky-padding-home{
+    padding-top: 60px;
+}
+
+.social-icons a:hover{
+    color: #800020;
+}
+.main-nav{
+    display: flex; justify-content: space-between;
+}
+.main-nav img{
+    width: 200px;
+}
+.main-box{
+    max-width: 80%;
+    margin: 0 auto;
+}
+#footer{
+    background-color: #ffa500;
+}
+#gallery{
+    background-color: #ffa500;
+    padding-bottom: 20px;
+}
+.gallery-container-inside h2{
+    color: white;
+}
+/* #donations{
+    padding-bottom: 20px;
+} */
+#footer h2{
+    color: white;
+}
+.card-text{
+    white-space: normal; /* Allow text to wrap to the next line */
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Display an ellipsis (...) if the text is too long */
+    color : #ffa500;
+    padding: 10px 0;
+}
+
+.gallery-image-card:hover{
+    background-color: rgba(128, 0, 32, 0.9);
+    border-color: #800020;
+}
+
+.gallery-image-card:hover p{
+    color: #fff;  
+}
+
+
+.navbar-light .navbar-toggler{
+    color: #ffa500;
+}
+.navbar{
+    justify-content: flex-start;
+}
+.navbar-light .navbar-nav .nav-link:focus{
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #ffa500;
+}
+
+@media screen and (max-width: 1200px) {
+    .mapouter, .gmap_canvas{
+        width: 100% !important;
+    }
+    .gmap_canvas iframe{
+        width: 100% !important;
+    }
+
+    .donation-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .donation-text{
+        margin: 0;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .donation-box div{
+        width: 100%;
+        padding-top: 30px;
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .home-image{
+        margin-bottom: 10px;
+    }
+
+    .donation-box p{
+        padding: 20px 0;
+        max-width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .donation-text{
+        margin: 0;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .donation-box{
+        padding: 10px 0 30px 0;
+    }
+    
+    .navbar{
+        padding: 10px;
+    }
+    h2{
+        padding: 20px 0;
+        margin-bottom: 0;
+    }
+    .gallery-image {
+        max-width: 400px;
+        max-height: 500px;
+        width: 100%;
+    }
+    #vighnaharta-carousel, #visarjan-carousel, #social-activities-carousels{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .donations-container-inside{
+        padding-bottom: 0;
+    }
+    .main-box{
+        max-width: 90%;
+    }
+    .galler-card{
+        justify-content: center;
+    }
+    .card-text{
+        font-size: 16px;
+        padding: 10px 0;
+    }
+    .donation-image{
+        max-width: 80%;
+        margin: 0px;
+    }
+    .donation-box div{
+        max-width: 100%;
+        width: 100%;
+        padding-left: 0;
+    }
+    .dropdown-mobile{
+        display: block;
+    }
+    
+    
+}
+@media screen and (max-width: 992px) {
+    .dropdown-desktop{
+        display: none;
+    }
+    .navbar-toggler {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+    .dropdown-mobile {
+        flex-grow: 1;
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+    .dropdown-content{
+        min-width: 80px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .dropdown-mobile{
+        display: none;
+    }
+    .dropdown-desktop{
+        display: block;
+    }
+}
+
+/* Rishi Css End */

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adarsh Nagar Sarvajanik Ganesh Utsav</title>
+    <link rel="icon" href="images/common/logo.avif" type="image/avif">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amita&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="preload" href="../images/ganpati-1.avif" as="image" type="image/avif"> -->
+
+    <!-- CDN Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/120cdbf9e6.js" crossorigin="anonymous"></script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
+
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <!--External Javascript File-->
+    <script src="js/functions.js"></script>
+
+
+
+</head>
+<body>
+
+    <!-- Loading Page -->
+    <!-- <div id="loading-page">
+        <img src="images/common/logo.avif" alt="Adarsh Nagar Logo" width="250px" type="image/avif">
+        <h2>Ganpati Bappa Morya</h2>
+        
+    </div> -->
+
+
+    <!-- Your website content goes here -->
+    <div id="content">
+        <!-- Nav Bar -->
+
+
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <!-- Add your logo here -->
+            <a class="navbar-brand" href="#"> <!-- Add a navbar-brand for the logo -->
+                <img src="images/common/logo.avif" alt="Adarsh Nagar logo" width="60"  onclick="scrollToSection('home')" type="image/avif"> <!-- Replace 'your-logo-image.avif' with the actual path to your logo image -->
+            </a>
+            <div class="dropdown dropdown-mobile">
+                <button  id="dropdown-button" class="dropbtn" data-translate="language-selected">English</button>
+                <div id="dropdown-content" class="dropdown-content">
+                  <a onclick="loadTranslations('english')">English</a>
+                  <a onclick="loadTranslations('marathi')">मराठी</a>
+                </div>
+                
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a data-translate="home-nav-text" class="nav-link" href="javascript:void(0);" onclick="scrollToSection('home')">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translate="gallery-nav-text" class="nav-link" href="javascript:void(0);" onclick="scrollToSection('gallery')">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translate="donations-nav-text" class="nav-link" href="javascript:void(0);" onclick="scrollToSection('donations')">Donations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-translate="contact-nav-text" class="nav-link" href="javascript:void(0);" onclick="scrollToSection('footer')">Contact us</a>
+                    </li>
+                    <!-- Add more menu items and section IDs as needed -->
+                </ul>
+            </div>
+            <div class="dropdown dropdown-desktop">
+                <button class="dropbtn" data-translate="language-selected">English</button>
+                <div class="dropdown-content">
+                  <a onclick="loadTranslations('english')">English</a>
+                  <a onclick="loadTranslations('marathi')">मराठी</a>
+                </div>
+            </div>
+        </nav>
+
+
+        <section id="home">
+            <div class="sticky-padding-home">
+                <div class="home-container-inside home-container">
+                    <div class="text-inside">
+                            <!-- Moving Banner -->
+                            <div class="moving-text-banner">
+                                <div data-translate="banner-text" class="banner-text">!! आदर्श नगर सार्वजनिक गणेशोत्सव मंडळातर्फे सर्व गणेश भक्तांचे हार्दिक स्वागत !!</div>
+                            </div>
+
+                            <div>
+                                <img class="home-image" src="images/common/home.avif" alt="ganpati pic 5" type="image/avif">
+                            </div>
+
+
+                            <div class="home-text main-box">
+                                <p class="shlok-font">
+                                    स्वस्ति श्री गणनायकं गजमुखं मोरेश्वरं सिध्दिदम,<br>
+                                    बल्लाळं, मुरुडं विनायक मदं चिंतामणि थेवरम<br>
+                                    लेण्याद्री, गिरिजात्मजं सुरवरं विघ्नेश्वर ओझरमं ।<br>
+                                    ग्रामो रांजण संस्थितमं गणपतिं कुर्यात सदामंगलम् ||<br>
+                                </p>
+                                <p data-translate="home-text-1" class="english-text">
+                                    Sarvajanik Ganeshotsav, initiated by Lokmanya Bal Gangadhar Tilak in 1893, has left a lasting legacy. Similarly, our Adarshnagar Sarvajanik Ganeshotsav Mandal was founded in 1951, and this year marks the auspicious 73rd anniversary of our cherished tradition.
+                                </p>
+                                <p data-translate="home-text-2" class="english-text">
+                                    Adarshnagar Sarvajanik Ganeshotsav Mandal continues to celebrate this festival with the same fervor and enthusiasm as it has done every year. As we commemorate the 73rd year of this grand celebration, it brings us immense joy to connect with you through this website, specially launched for this occasion.
+                                </p>        
+                                <p data-translate="home-text-3" class="english-text">
+                                    This public festival unites the entire Adarsh Nagar colony, comprising 68 buildings. Over the past 73 years, this festival has brought us all together without any distinctions, fostering a sense of unity and togetherness that is truly remarkable.
+                                </p>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="gallery">
+            <div class="sticky-padding">
+                <div class="gallery-container-inside main-box">
+                    
+
+                    <div class="fade-in-text">
+                        <h2 data-translate="gallery-section-text">Gallery</h2>
+                    </div>
+
+                    <div class="d-flex">
+                        <div class="flex-item col-1 carousel-button">
+                            <!-- <button class="scroll-button scroll-left-button" id="" >&#9665;</button> -->
+                            <div class="flex-item col-1 carousel-button">
+                                <i class="fa-solid fa-less-than scroll-button scroll-right-button" id="scrollLeftButton" disabled></i>
+                            </div>
+                        </div>
+                        
+                        <div id="cardContainer" class="flex-item card-container col-10"> 
+                            <div class="gallery-image-card card shadow" onclick="add_images_carousel('Aagman', 9)"> <!-- add_images_carousel(card_name, images_count) -->
+                                <img src="images/common/aagman-card.avif" class="card-img-top" alt="Card Image" type="image/avif">   <!-- 2551px x 2875px  -->
+                                <p class="card-text" data-translate="aagman-card-text">Aagman</p>
+                            </div>
+                            <div class="gallery-image-card card shadow" onclick="add_images_carousel('HealthCheckup', 5)">
+                                <img src="images/common/health-card.avif" class=" card-img-top" alt="Card Image" type="image/avif">
+                                <p class="card-text" data-translate="health-card-text">Health Checkup</p>
+                            </div>
+                            <div class="gallery-image-card card shadow" onclick="add_images_carousel('Bhog', 10)">
+                                <img src="images/common/bhog-card.avif" class=" card-img-top" alt="Card Image" type="image/avif">
+                                <p class="card-text" data-translate="bhog-card-text">५६  Bhog</p>
+                            </div>
+
+                            <!-- <div class="gallery-image-card card shadow" onclick="add_images_carousel('Visarjan', 2)">
+                                <img src="images/common/aagman-card.avif" class=" card-img-top" alt="Card Image" type="image/avif">
+                                <p class="card-text" data-translate="visarjan-card-text">Visarjan</p>
+                            </div> -->
+                            <div class="gallery-image-card card shadow" onclick="add_images_carousel('Events', 10)">
+                                <img src="images/common/events.avif" class=" card-img-top" alt="Card Image" type="image/avif">
+                                <p class="card-text" data-translate="events-card-text">Other Events</p>
+                            </div>
+
+
+                        </div>
+                        <div class="flex-item col-1 carousel-button">
+                            <i class="fa-solid fa-greater-than scroll-button scroll-right-button" id="scrollRightButton"></i>
+                        </div>
+                        
+                    </div>
+
+
+                    <div id="gallery-carousel" class="carousel slide ganpati-carousel" data-ride="false">
+                        <div class="carousel-inner" id="carousel-inner">
+                            <!-- Carousel slides go here -->
+                        </div>
+                        <!-- Desktop View Navigation Buttons -->
+                        <a class="carousel-control-prev d-none d-md-flex" href="#gallery-carousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next d-none d-md-flex" href="#gallery-carousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section id="donations">
+            <div class="sticky-padding home-container">
+                <div class="text-inside">
+                    <div class="donations-container-inside main-box ">
+                        <div class="fade-in-text">
+                            <h2 data-translate="donations-section-text">Donations</h2>
+                        </div>
+
+                        <div class="donation-box">
+                            <img class="donation-image card" src="images/common/qr-donation.jpg" alt="ganpati pic 5" type="image/jpg">
+                            <div>
+                                <p data-translate="donation-text">Adarsh Nagar Sarvajanik Ganeshotsav Mandal is dedicated to celebrating the spirit of Ganesh Chaturthi. Your generous donation will help us in organizing cultural events, promoting environmentally friendly practices, and supporting our local community. Let us work together to make this Ganeshotsav memorable for everyone.</p>
+                                <span class="donation-text">
+                                    Acc No: 010200100007398 <br> IFSC: SRCB0000010
+                                </span>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="footer">
+            <div class="sticky-padding">
+                <div class="fade-in-text">
+                    <h2 data-translate="contact-section-text">Contact Us</h2>
+                </div>
+                <div class="footer-content main-box">
+                    <p data-translate="footer-address-text">Adarsh Nagar Sarvajanik Ganeshotsav Mandal, Near Worli Sports Club, Adarsh Nagar, Worli, Mumbai 400030</p>
+                    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1080&amp;height=400&amp;hl=en&amp;q=Adarsh nagar sarvajanik ganeshotsav mandal&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" loading="lazy"></iframe><a href="https://connectionsgame.org/">Connections NYT</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+                </div>
+                <p class="footer-content main-box" data-translate="follow-text">Make sure to follow us on</p>
+                <div class="social-icons">
+                    <!-- <a href="https://www.linkedin.com/in/rajneesh-katkam-460204115/" class="contact-icon-custom"><i class="fab fa-linkedin"></i></a> -->
+                    <a href="https://www.instagram.com/adarshnagarcha_vakratunda/"  target="_blank" class="contact-icon-custom"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61552006820194"  target="_blank" class="contact-icon-custom"><i class="fab fa-facebook"></i></a>
+                    <a href="mailto:admin@adarshnagarchavakratunda.in"  target="_blank" class="contact-icon-custom"><i class="fa fa-envelope"></i></a>
+                    <!-- <a href="https://github.com/rajneeshkatkam" class="contact-icon-custom"><i class="fab fa-github"></i></a> -->
+                    <!-- <hr class="hr-class-gray "> -->
+                </div>
+                <p class="footer-custom">© 2023 Adarsh Nagar Sarvajanik Ganeshotsav Mandal. All rights reserverd.</p>
+            </div>
+
+        </section>
+
+    </div>
+
+
+   
+    
+</body>
+</html>
